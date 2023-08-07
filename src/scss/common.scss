@@ -1,0 +1,215 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: rem(58);
+    text-transform: capitalize;
+    line-height: 1.172;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: rem(48);
+    font-family: "Roboto", sans-serif;
+    color: var(--text-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+h3 {
+    font-size: rem(22);
+    font-family: "Roboto", sans-serif;
+    color: var(--text-primary);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+h4 {
+    font-size: rem(16);
+    font-family: "Roboto", sans-serif;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h5 {
+}
+
+a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    padding: rem(18) rem(36);
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    // width: 100%;
+
+    &:active {
+        transform: translateY(4px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__inverse {
+        color: var(--text-accent);
+        background-color: var(--text-primary);
+        padding: rem(25) rem(36);
+        &:hover {
+            color: var(--text-accent);
+            background-color: var(--primary);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
+        }
+    }
+
+    &__primary {
+        color: var(--text-accent);
+        background-color: var(--primary);
+        &:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &_accent {
+            box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
+        }
+    }
+    &__secondary {
+        background-color: transparent;
+        color: var(--text-primary);
+        border: rem(3) solid var(--primary);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: var(--primary);
+            box-shadow: var(--block-box-shadow);
+            color: var(--text-accent);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
+        }
+    }
+}
+
+blockquote {
+    font-size: 22px;
+    font-family: "Roboto";
+    color: var(--text-primary);
+    line-height: 1.455;
+    border-left: rem(1) solid var(--primary);
+    background-color: var(--bg-secondary);
+    padding: rem(40);
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    color: var(--text-primary);
+    // line-height: 2.25;
+    background-color: var(--bg-primary);
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    padding: rem(17) rem(0) rem(19) rem(17);
+    width: 100%;
+
+    &:focus {
+        outline: 1px solid rgb(196, 196, 196);
+    }
+    &::placeholder {
+        color: var(--text-secondary);
+    }
+    &:invalid:not(:placeholder-shown) {
+        border-bottom: rem(2) solid red;
+    }
+    &:valid:not(:placeholder-shown) {
+        border-bottom: rem(2) solid green;
+    }
+    &:active {
+        background: inherit;
+    }
+    &:focus {
+        outline: 1px solid var(--primary);
+    }
+    // &:-internal-autofill-selected {
+    //     background-color: #ffffff; /* Новый цвет фона */
+    // }
+}
+
+input {
+    &__secondary {
+        background-color: var(--bg-secondary);
+        box-shadow: none;
+    }
+}
+
+textarea {
+    resize: none;
+    min-height: rem(220);
+    padding: rem(19) rem(0) rem(0) rem(17);
+}
+
+.logo {
+    width: rem(183);
+    height: rem(30);
+    cursor: pointer;
+}
+
+// .title-underline {
+//     position: relative;
+
+//     &::after {
+//         position: absolute;
+//         content: "";
+//         bottom: 0;
+//         left: 0;
+//         height: rem(4);
+//         width: rem(80);
+//         background: var(--primary);
+//         margin: rem(14) rem(0) rem(0) rem(0);
+//     }
+// }
+
+li {
+    a {
+        &:hover {
+            color: var(--primary);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.serch {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    &__icon {
+        background: var(--bg-accent);
+    }
+}
+
+a {
+    svg {
+        cursor: pointer;
+    }
+}
+
+.icon-badge {
+    position: absolute;
+    content: "";
+    top: -11px;
+    right: -14px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    z-index: 2;
+    color: var(--text-accent);
+    padding: 4px 8px;
+    font-size: rem(12);
+    font-family: "Quicksand";
+    line-height: 1.2;
+}

@@ -1,0 +1,25 @@
+@use "sass:math";
+
+@import "base/mixins";
+//@import "fonts/fonts";
+//@import "fonts/icons";
+@import "base/var";
+@import "base/null";
+@import "base/animation";
+@import "base";
+@import "common";
+
+// Підключення стилів окремих блоків
+@import "header";
+@import "footer";
+
+// Підключення стилів окремих сторінок
+@import "page/home";
+@import "page/home/action";
+@import "page/home/benefit";
+@import "page/home/blog";
+@import "page/home/categories";
+@import "page/home/partners";
+@import "page/home/timer";
+@import "page/home/trending";
+@import "page/home/video";
